@@ -23,6 +23,11 @@ public class JackBingoTest {
 				WebDriverWait wait = new WebDriverWait(driver,30);
 				wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/jackbingo-user/app-game/div/game-session/div/div/div[1]/game-upcommingsession/div/div[2]/div[7]/div[2]")));
 				driver.findElementByXPath("/html/body/jackbingo-user/app-game/div/game-session/div/div/div[1]/game-upcommingsession/div/div[2]/div[7]/div[2]").click();
+				
+				
+				
+				
+				
 		}
 		
 		

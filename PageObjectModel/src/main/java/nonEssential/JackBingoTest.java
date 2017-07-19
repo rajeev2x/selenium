@@ -1,6 +1,8 @@
 package nonEssential;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,17 +23,17 @@ public class JackBingoTest {
 				driver.findElementByName("PinNumber").sendKeys("123456");
 				driver.findElementByClassName("btn").click();
 				WebDriverWait wait = new WebDriverWait(driver,30);
-				wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/jackbingo-user/app-game/div/game-session/div/div/div[1]/game-upcommingsession/div/div[2]/div[7]/div[2]")));
-				driver.findElementByXPath("/html/body/jackbingo-user/app-game/div/game-session/div/div/div[1]/game-upcommingsession/div/div[2]/div[7]/div[2]").click();
-				
-				
-				
-				
+				wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//game-upcommingsession/div/div[2]/div[1]/div[2]")));
+				driver.findElementByXPath("//game-upcommingsession/div/div[2]/div[1]/div[2]").click();
+				new WebDriverWait(driver, 500)
+		        .ignoring(NoAlertPresentException.class)
+		        .until(ExpectedConditions.alertIsPresent());
+				Alert al = driver.switchTo().alert();
+				al.accept();	
 				
 		}
 		
-		
-		
+			
 	}
 
 

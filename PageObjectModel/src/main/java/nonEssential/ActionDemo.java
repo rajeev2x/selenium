@@ -6,7 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class ActionDemo {
+public class ActionDemo
+{
 
 	public static void main(String[] args) throws InterruptedException 
 	{
